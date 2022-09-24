@@ -1,6 +1,10 @@
 data "azuread_groups" "all" {
   return_all = true
 }
+
+output "members_in_groups"{
+  value= data.azuread_groups.all.display_names
+}
 # data "azuread_group" "this" {
 #   for_each = local.all_groups
 #   display_name = each.value
