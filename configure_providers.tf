@@ -5,6 +5,7 @@ Please use for the provider to access the techsummit databricks workspace as an 
 
 */
 
-#provider databricks {
-#  ...
-#}
+provider databricks {
+ //...
+}
+provider "azuread" {}
