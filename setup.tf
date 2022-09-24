@@ -5,8 +5,3 @@ variable "region" {
 
 
 
-locals {
-  groupname = "mygroup${random_string.suffix.result}"
-}
-
-
