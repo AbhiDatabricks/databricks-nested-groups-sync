@@ -3,7 +3,8 @@ data "azuread_groups" "all" {
 }
 
 output "members_in_groups"{
-  value= data.azuread_groups.all.display_names
+  for_each= data.azuread_groups.all.display_names
+  value=each.key
 }
 # data "azuread_group" "this" {
 #   for_each = local.all_groups
